@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Quicksand:wght@500&family=Raleway:wght@200&family=Redressed&family=Xanh+Mono:ital@1&display=swap');
+@import 'stories.css';
+@import 'about.css';
+@import 'contact.css';
+@media(min-width:900px) {
+    .container {
+        grid-template-areas: "hd hd" "main fe" "ft ft" !important;
+    }
+    .tile {
+        grid-area: main !important;
+        height: 20em !important;
+        width: 30em;
+    }
+    .feature {
+        grid-area: fe !important;
+        height: 20em;
+        width: 30em;
+    }
+}
+
+@media(min-width:700px) {
+    #camper-logo {
+        width: 45%;
+    }
+    .tabs>a>span {
+        font-size: 2rem !important;
+        line-height: 52px !important;
+    }
+    footer {
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-evenly !important;
+        font-size: 1.25rem !important;
+    }
+    footer p:last-child {
+        width: 30%;
+    }
+    #github {
+        width: 14% !important;
+    }
+}
+
+body {
+    background-color: #FDF5E6;
+}
+
+.container {
+    display: grid;
+    grid-auto-rows: minmax(auto, max-content);
+    grid-template-areas: "hd" "main" "fe" "ft";
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+header {
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: hd;
+}
+
+#camper-logo {
+    width: 40%;
+}
+
+.tabs {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.tabs>a {
+    line-height: 28px;
+    color: rgb(88, 88, 19);
+    text-decoration: none;
+}
+
+.tabs>a>span {
+    font-size: 1.25rem;
+    background-color: lavender;
+    border-radius: 10%;
+}
+
+.tile {
+    font-family: 'Raleway', sans-serif;
+    grid-area: main;
+    border: 1px solid lavender;
+    background-color: lavender;
+    height: 15em;
+    margin-left: 12px;
+    margin-right: 12px;
+    border-radius: 25px;
+}
+
+.tile>iframe {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.feature {
+    grid-area: fe;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.slides {
+    width: 100%;
+    border-radius: 25px;
+    display: none;
+}
+
+footer {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    grid-area: ft;
+    font-size: 1rem;
+}
+
+#github {
+    vertical-align: middle;
+    width: 7%;
+}

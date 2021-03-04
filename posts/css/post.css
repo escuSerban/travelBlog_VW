@@ -1,0 +1,149 @@
+@media(min-width: 1200px) {
+    .gallery {
+        margin-left: 32px;
+    }
+    #back {
+        width: 8vw !important;
+        padding-left: 12px !important;
+    }
+}
+
+@media(min-width:700px) {
+    .photoBox {
+        width: 500px !important;
+        height: 300px !important;
+    }
+    footer {
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: space-evenly !important;
+        font-size: 1.25rem !important;
+    }
+    footer p:last-child {
+        width: 30%;
+    }
+    #github {
+        width: 14% !important;
+    }
+}
+
+body {
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: "bar" "hd" "main" "se" "dt" "fg" "sm" "ft";
+    gap: 12px;
+}
+
+.top-bar {
+    grid-area: bar;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    height: 5vh;
+}
+
+#back {
+    position: fixed;
+    padding: 4px;
+    display: flex;
+    width: 17vw;
+    height: 4vh;
+    align-items: center;
+    text-decoration: none;
+    color: purple;
+    background-color: beige;
+}
+
+#bgr-img {
+    background-image: url('../../images/woods.png');
+    background-size: contain;
+    background-color: beige;
+    width: 100%;
+}
+
+header {
+    grid-area: hd;
+    text-align: center;
+}
+
+header>h1>span {
+    background-color: lavender;
+    border-radius: 10%;
+}
+
+main {
+    grid-area: main;
+}
+
+main>h2 {
+    text-indent: 4vw;
+    ;
+}
+
+main>p {
+    text-indent: 2vw;
+    color: #556B2F;
+    line-height: 6vh;
+}
+
+.gallery {
+    grid-area: se;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    gap: 4px;
+}
+
+.photoBox {
+    width: 175px;
+    height: 100px;
+    border: 1px solid brown;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.ad-info {
+    grid-area: dt;
+    text-indent: 2vw;
+    line-height: 4vh;
+}
+
+.fig {
+    grid-area: fg;
+}
+
+#ci-img {
+    height: 100%;
+    width: 100%;
+}
+
+.social {
+    grid-area: sm;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    gap: 12px;
+}
+
+footer {
+    grid-area: ft;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    grid-area: ft;
+    font-size: 1rem;
+}
+
+#github {
+    vertical-align: middle;
+    width: 7%;
+}
